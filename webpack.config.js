@@ -6,6 +6,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 const webpack = require('webpack');
 
 let isDevMode = false;
@@ -37,6 +38,14 @@ const plugins = () => {
           syntactic: true,
         },
       },
+    })
+  )
+
+  base.push(
+    new CopyPlugin({
+      patterns: [
+        { from: './src/assets/icons/favicon.ico', to: './' }
+      ]
     })
   )
 
@@ -137,7 +146,7 @@ module.exports = (env, args) => {
     entry: {
       index: path.resolve(__dirname, 'src'),
     },
-    devtool: isDevMode ? 'eval-cheap-module-source-map' : '',
+    devtool: isDevMode ? 'eval-cheap-module-source-map' : undefined,
     output: {
       path: path.resolve(__dirname, 'build'),
       filename: `scripts/[name].bundle.js`,

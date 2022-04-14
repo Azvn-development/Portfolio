@@ -5,8 +5,7 @@
   "main": "./src/index.ts",
   "scripts": {
     "dev": "webpack serve --mode development --env dev --hot --open --config webpack.config.js",
-    "build:test": "webpack --mode production --env dev --config webpack.config.js",
-    "build:prod": "webpack --mode production --env prod --config webpack.config.js"
+    "build": "webpack --mode production --env prod --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
@@ -39,6 +38,7 @@
     "autoprefixer": "^10.4.4",
     "babel-loader": "^8.2.4",
     "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^5.2.7",
     "css-minimizer-webpack-plugin": "^3.4.1",
     "eslint": "^8.13.0",
