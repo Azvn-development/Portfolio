@@ -1,0 +1,21 @@
+.socials {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 10px;
+    justify-content: center;
+    align-content: center;
+    list-style: none;
+    padding-left: 0;
+
+    .icon {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        fill: $green;
+        transition: all 0.3s;
+
+        &:hover {
+            fill: $dark-green;
+        }
+    }
+}

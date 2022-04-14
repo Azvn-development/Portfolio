@@ -1,0 +1,31 @@
+.images-list {
+    display: grid;
+    position: fixed;
+    justify-items: flex-end;
+    align-content: flex-start;
+    top: 0;
+    left: 0;
+    row-gap: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    width: 100vw;
+    height: 100vh;
+
+    > img {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+    }
+
+    > ul {
+        list-style: none;
+        padding: 5px 10px;
+        overflow: auto;
+
+        > li {
+            > img {
+                width: 100%;
+            }
+        }
+    }
+}

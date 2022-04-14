@@ -1,0 +1,51 @@
+.contacts {
+    display: grid;
+    row-gap: 20px;
+    padding-left: 20%;
+    color: $white;
+
+    > dl {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        width: fit-content;
+        column-gap: 20px;
+        row-gap: 5px;
+
+        > dd {
+            > a {
+                text-decoration: none;
+                transition: all .3s;
+                color: $white;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+
+            .socials {
+                display: grid;
+                grid-auto-flow: column;
+                justify-content: flex-start;
+                column-gap: 15px;
+
+                .icon {
+                    width: 30px;
+                    height: 30px;
+                    fill: #fff;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        cursor: pointer;
+                        fill: $green;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: $mobile-content-width) {
+    .contacts {
+        padding-left: 20px;
+    }
+}

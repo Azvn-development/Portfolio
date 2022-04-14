@@ -1,0 +1,15 @@
+.main {
+    display: grid;
+    justify-content: center;
+    row-gap: 70px;
+    max-width: $pc-content-width;
+    margin: 0 auto;
+    min-height: calc(100vh - #{$header-height} - #{$footer-height});
+    padding: 60px 20px 150px;
+}
+
+@media(max-width: $pc-content-width) {
+    .main {
+        padding-bottom: 100px;
+    }
+}

@@ -1,0 +1,56 @@
+.portfolio {
+    display: grid;
+    row-gap: 40px;
+
+    > h2 {
+        text-align: center;
+        color: $green;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+        row-gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        > li {
+            display: grid;
+            row-gap: 20px;
+            padding: 20px 30px 30px;
+            border-radius: 15px;
+            box-shadow: $box-shadow;
+            transition: all 0.3s;
+            border-bottom: 4px solid $green;
+            align-content: flex-start;
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: $box-shadow-hovered;
+            }
+
+            > img {
+                border: 1px solid $black;
+                width: 100%;
+            }
+
+            > h3, p {
+                text-align: center;
+            }
+
+            > p {
+                margin-top: -10px;
+            }
+        }
+    }
+}
+
+@media(max-width: $mobile-content-width) {
+    .portfolio {
+        .projects {
+            grid-template-columns: 1fr;
+        }
+    }
+}

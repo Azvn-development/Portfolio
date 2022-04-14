@@ -1,0 +1,31 @@
+.experience {
+    display: grid;
+    row-gap: 40px;
+
+    > h2 {
+        color: $green;
+        text-align: center;
+    }
+
+    .experience-list {
+        display: grid;
+        list-style: none;
+        row-gap: 25px;
+        margin: 0;
+        padding: 0;
+
+        > li {
+            display: grid;
+            grid-auto-flow: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            column-gap: 20px;
+
+            .description {
+                display: grid;
+                row-gap: 10px;
+                padding-top: 10px;
+            }
+        }
+    }
+}
