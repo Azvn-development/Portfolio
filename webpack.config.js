@@ -149,9 +149,8 @@ module.exports = (env, args) => {
     devtool: isDevMode ? 'eval-cheap-module-source-map' : undefined,
     output: {
       path: path.resolve(__dirname, 'build'),
-      filename: `./scripts/[name].bundle.js`,
-      chunkFilename: './scripts/[name].bundle.js',
-      publicPath: '/',
+      filename: `scripts/[name].bundle.js`,
+      chunkFilename: 'scripts/[name].bundle.js',
     },
     plugins: plugins(),
     devServer: {
